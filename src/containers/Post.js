@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SimpleTable from '../components/SimpleTable';
-import ModalPost from '../components/ModalPost';
+import SimpleTable from '../components/SimpleTable/SimpleTable';
+import ModalPost from '../components/ModalPost/ModalPost';
 import { Paper, Button } from '@material-ui/core';
 
 class Post extends Component {

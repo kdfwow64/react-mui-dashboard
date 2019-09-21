@@ -11,7 +11,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { NavLink } from 'react-router-dom';
-import sidebarStyle from '../assets/jss/sidebarStyle';
+import sidebarStyle from '../../assets/jss/sidebarStyle';
 
 class Sidebar extends Component {
   render() {

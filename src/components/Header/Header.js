@@ -6,16 +6,17 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import headerStyle from '../assets/jss/headerStyle';
+import headerStyle from '../../assets/jss/headerStyle';
 
 class Header extends Component {
   render() {
-    const { classes, open, anchor, onClickDrawerOpen } = this.props;
+    const { classes, open, isOpenDashboard, anchor, onClickDrawerOpen, onClickDrawerClose, onClickOpenDashboard } = this.props;
 
     return (
       <AppBar
-        className={classNames(classes.appBar, {
+        className={classNames(classes.appBar, "header-custom", {
           [classes.appBarShift]: open,
           [classes[`appBarShift-${anchor}`]]: open,
         })}>
@@ -23,10 +24,15 @@ class Header extends Component {
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            onClick={onClickDrawerOpen}
-            className={classNames(classes.menuButton, open && classes.hide)}
+            onClick={isOpenDashboard ? !open ? onClickDrawerOpen : onClickDrawerClose : onClickOpenDashboard }
+            className={classNames(classes.menuButton)}
           >
-            <MenuIcon />
+            {
+              isOpenDashboard ?
+              <MenuIcon />
+              :
+              <CloseIcon />
+            }
           </IconButton>
           <Typography variant="title" color="inherit" noWrap>
             MUI Dash

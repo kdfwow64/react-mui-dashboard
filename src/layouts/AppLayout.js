@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import appRoutes from '../routes/app';
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-import SettingBar from '../components/SettingBar';
+import Header from '../components/Header/Header';
+import Sidebar from '../components/Sidebar/Sidebar';
+import SettingBar from '../components/SettingBar/SettingBar';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -16,6 +16,7 @@ class AppLayout extends Component {
     super(props);
     this.state = {
       open: false,
+      isOpenDashboard: true,
       anchor: 'left'
     };
   }
@@ -34,6 +35,12 @@ class AppLayout extends Component {
     });
   };
 
+  handleDashboardStatus = (status) => {
+    this.setState({
+      isOpenDashboard: status
+    });
+  }
+
   render() {
     const { classes } = this.props;
     const { anchor, open } = this.state;
@@ -51,7 +58,12 @@ class AppLayout extends Component {
       <div className={classes.root}>
         <CssBaseline />
         <div className={classes.appFrame}>
-          <Header {...this.state} onClickDrawerOpen={this.handleDrawerOpen} onChangeAnchor={this.handleChangeAnchor} />
+          <Header {...this.state}
+            onClickDrawerOpen={this.handleDrawerOpen}
+            onClickDrawerClose={this.handleDrawerClose}
+            onChangeAnchor={this.handleChangeAnchor}
+            onClickOpenDashboard={this.handleDashboardStatus}
+          />
           {before}
           <main
             className={classNames(classes.content, classes[`content-${anchor}`], {
