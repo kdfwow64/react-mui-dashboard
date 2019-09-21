@@ -52,7 +52,7 @@
     color: grey;
 }
 
-.sidebar-href-div >div[role=button] >svg {
+.sidebar-href-div >div[role=button] >div >svg {
     fill: #7b39ff !important;
 }
 
