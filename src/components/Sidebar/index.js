@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -12,6 +13,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { NavLink } from 'react-router-dom';
 import sidebarStyle from '../../assets/jss/sidebarStyle';
+import { mainListItems, secondaryListItems } from '../../config/sidebarItems';
+import './style.css';
+import logo from '../images/logo.png';
 
 class Sidebar extends Component {
   render() {
@@ -24,28 +28,15 @@ class Sidebar extends Component {
           anchor={this.props.anchor}
           open={this.props.open}
           classes={{
-            paper: classes.drawerPaper,
+            paper: classNames(classes.drawerPaper, "sidebar-custom"),
           }}>
-          <div className={classes.drawerHeader}>
-            <IconButton onClick={this.props.onClickDrawerClose}>
-              {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-            </IconButton>
+          <div className="logo-div">
+            <img src={logo}></img>
           </div>
           <Divider />
-          <List>
-            {
-              this.props.routes.map((route, index) => (
-                <ListItem component={NavLink} to={route.path} key={index} className={classes.navLink} activeStyle={{fontWeight: 'bold', background: '#cdcdcd'}} button>
-                  <ListItemIcon>
-                    <route.icon/>
-                  </ListItemIcon>
-                  <ListItemText primary={route.sidebarName} classes={{
-                    primary: classes.listItemTextPrimary
-                  }} />
-                </ListItem>
-              )
-            )}
-          </List>
+          <List className="padding-top-remove svg-color-custom">{mainListItems}</List>
+          <Divider />
+          <List className="svg-color-custom">{secondaryListItems}</List>
           <Divider />
         </Drawer>
       </div>

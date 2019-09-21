@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import appRoutes from '../routes/app';
-import Header from '../components/Header/Header';
-import Sidebar from '../components/Sidebar/Sidebar';
-import SettingBar from '../components/SettingBar/SettingBar';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
+import SettingBar from '../components/SettingBar';
+import CreateNewLead from '../components/CreateNewLead';
+import Dashboard from '../components/Dashboard';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import appLayoutStyle from '../assets/jss/appLayoutStyle';
+import './style.css';
 
 class AppLayout extends Component {
   constructor(props) {
@@ -36,6 +39,7 @@ class AppLayout extends Component {
   };
 
   handleDashboardStatus = (status) => {
+    console.log(status);
     this.setState({
       isOpenDashboard: status
     });
@@ -66,19 +70,24 @@ class AppLayout extends Component {
           />
           {before}
           <main
-            className={classNames(classes.content, classes[`content-${anchor}`], {
+            className={classNames(classes.content, classes[`content-${anchor}`], "main-div-custom", open && "content-open", !open && "content-close", {
               [classes.contentShift]: open,
               [classes[`contentShift-${anchor}`]]: open,
             })}>
             <div className={classes.drawerHeader}></div>
-            <SettingBar anchor={anchor} onChangeAnchor={this.handleChangeAnchor} />
-            <Typography>{'Version 0.0.1'}</Typography>
+            {/* <SettingBar anchor={anchor} onChangeAnchor={this.handleChangeAnchor} />
             <Switch>
               {appRoutes.map((route, index) => 
                 <Route path={route.path} component={route.component} key={index} />
               )}
               <Redirect from='/' to='/dashboard'/>
-            </Switch>
+            </Switch> */}
+            {
+              this.state.isOpenDashboard ?
+              <Dashboard classes={classes} open={open} openNewLead={this.handleDashboardStatus} onClick={this.handleDrawerClose} />
+              :
+              <CreateNewLead classes={classes} open={open} openDashboard={this.handleDashboardStatus} />
+            }
           </main>
           {after}
         </div>

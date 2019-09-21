@@ -1,0 +1,17 @@
+.btn-custom {
+    background-color: rgb(92, 42, 193, 0.9) !important;
+    transition-duration: 700ms !important;
+    color: white !important;
+    font-size: 500 !important;
+    border: none !important;
+    padding: 10px 50px !important;
+}
+
+.btn-custom:hover {
+    background-color: rgb(92, 42, 193, 0.7) !important;
+}
+
+.container-custom {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}

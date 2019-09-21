@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SimpleTable from '../components/SimpleTable/SimpleTable';
-import ModalUser from '../components/ModalUser/ModalUser';
+import SimpleTable from '../components/SimpleTable';
+import ModalUser from '../components/ModalUser';
 import { Paper, Button } from '@material-ui/core';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 

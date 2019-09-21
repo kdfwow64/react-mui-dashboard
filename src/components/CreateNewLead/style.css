@@ -1,0 +1,152 @@
+
+.icon-textfield {
+    position: absolute;
+    margin-top: 20px;
+}
+
+.text-field-custom {
+    width: 470px !important;
+}
+
+.text-field-custom >div >input {
+    padding-left: 30px;
+}
+
+.text-field-custom >label {
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.text-field-custom >label.Mui-focused {
+    /* margin: 0 !important; */
+    margin-top: 8px !important;
+    margin-left: 30px !important;
+}
+
+.text-field-custom input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 14px;
+}
+.text-field-custom input::-moz-placeholder { /* Firefox 19+ */
+    font-size: 14px;
+}
+.text-field-custom input:-ms-input-placeholder { /* IE 10+ */
+    font-size: 14px;
+}
+.text-field-custom input:-moz-placeholder { /* Firefox 18- */
+    font-size: 14px;
+}
+
+.calendar-div-custom {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    width: 470px !important;
+}
+
+.calendar-div-custom >label {
+    margin-left: 30px !important;
+    font-size: 14px;
+}
+
+.calendar-div-custom >div >input {
+    padding-left: 30px !important;
+}
+
+.calendar-div-custom >div >div {
+    position: absolute;
+    margin-left: -12px !important;
+}
+
+.margin-top-12px {
+    margin-top: 12px !important;
+}
+
+.h1-custom {
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: -15px;
+}
+
+.fixed-txt {
+    position: absolute;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.54);
+    margin-top: 21px;
+}
+
+.select-fixed-txt {
+    position: absolute;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.54);
+    margin-top: 7px;
+}
+
+.fixed-text-field-custom {
+    width: 470px !important;
+    margin-top: 17px !important;
+}
+
+.fixed-text-field-custom >div >input {
+    padding-left: 60px;
+    font-size: 14px;
+}
+
+.margin-top-40px {
+    margin-top: 40px !important;
+}
+
+.new-select-custom >div >div >div >div.MuiInputBase-root {
+    padding-left: 45px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-div-custom {
+        padding: 0 !important;
+        margin-top: 25px !important;
+    }
+
+    .content-custom {
+        text-align: center !important;
+    }
+
+    .content-custom-close {
+        padding: 0 !important;
+    }
+
+    .content-custom-open .overlay {
+        display: unset;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        position: absolute;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .MuiDrawer-root.MuiDrawer-docked {
+        box-shadow: none;
+    }
+
+    .text-field-custom {
+        width: 340px !important;
+    }
+    .fixed-text-field-custom {
+        width: 340px !important;
+    }
+
+    .calendar-div-custom {
+        margin-top: -20px !important;
+        width: 340px !important;
+    }
+
+    .new-select-custom >div {
+        width: 340px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .main-div-custom.content-open {
+        height: 100vh !important;
+        margin-right: -250px !important;
+        overflow: hidden !important;
+    }
+}

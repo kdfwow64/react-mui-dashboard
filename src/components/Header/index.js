@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import headerStyle from '../../assets/jss/headerStyle';
+import './style.css';
 
 class Header extends Component {
   render() {
@@ -35,7 +36,12 @@ class Header extends Component {
             }
           </IconButton>
           <Typography variant="title" color="inherit" noWrap>
-            MUI Dash
+            {
+              isOpenDashboard ?
+              "Dashboard"
+              :
+              "Create New Lead"
+            }
           </Typography>
         </Toolbar>
       </AppBar>
