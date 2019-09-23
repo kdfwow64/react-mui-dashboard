@@ -24,7 +24,7 @@ export const mainListItems = (
     </ListItem>
     <Divider />
     <ListItem button>
-      <ListItemIcon>
+      <ListItemIcon className="sidebar-href-svg-custom">
         <DvrIcon color="red" />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />

@@ -9,7 +9,8 @@
 }
 
 .sidebar-custom .logo-div {
-    width: 250px;
+    width: 248px;
+    height: 248px;
     background-color: rgb(92, 42, 193); 
 }
 
@@ -39,7 +40,7 @@
 }
 
 .avatar-btn .user-info-div {
-    margin-left: 18px;
+    margin: 0 0 0 18px !important;
 }
 
 .avatar-btn .user-info-div .user-name {
@@ -58,4 +59,10 @@
 
 .svg-color-custom .MuiListItemText-primary {
     font-size: 14px;
+}
+
+.sidebar-href-div .sidebar-href-svg-custom {
+    display: flex;
+    align-items: center;
+    height: 32px;;
 }

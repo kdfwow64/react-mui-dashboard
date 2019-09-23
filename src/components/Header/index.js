@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,7 +18,7 @@ class Header extends Component {
 
     return (
       <AppBar
-        className={classNames(classes.appBar, "header-custom", {
+        className={clsx(classes.appBar, "header-custom", open && "header-open", {
           [classes.appBarShift]: open,
           [classes[`appBarShift-${anchor}`]]: open,
         })}>
@@ -26,7 +27,7 @@ class Header extends Component {
             color="inherit"
             aria-label="open drawer"
             onClick={isOpenDashboard ? !open ? onClickDrawerOpen : onClickDrawerClose : onClickOpenDashboard }
-            className={classNames(classes.menuButton)}
+            className={classNames(classes.menuButton, "btn-menu-custom")}
           >
             {
               isOpenDashboard ?
@@ -35,7 +36,7 @@ class Header extends Component {
               <CloseIcon />
             }
           </IconButton>
-          <Typography variant="title" color="inherit" noWrap>
+          <Typography className="header-title-custom" variant="title" color="inherit" noWrap>
             {
               isOpenDashboard ?
               "Dashboard"

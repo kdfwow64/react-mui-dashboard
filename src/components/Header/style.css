@@ -1,4 +1,27 @@
 .header-custom {
     background-color: #7b39ff !important;
     position: fixed !important;
+    font-size: 21px !important;
+}
+
+.header-custom >div {
+    min-height: 50px !important;
+    padding: 0 12px;
+}
+
+.header-custom .btn-menu-custom {
+    padding: 5px !important;
+    margin: 0 !important;
+}
+
+.header-open {
+    left: 0 !important;
+    margin-left: 250px !important;
+    z-index: 99999 !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-open {
+
+    }
 }

@@ -1,7 +1,15 @@
+body {
+    font-family: Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+}
+
 .content-open {
     margin-left: 250px !important;
 }
 
 .content-close {
     margin-left: 0 !important;
+}
+
+.header-title-custom {
+    margin-left: 12px !important;
 }

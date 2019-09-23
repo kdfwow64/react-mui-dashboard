@@ -36,7 +36,7 @@ class Sidebar extends Component {
           <Divider />
           <List className="padding-top-remove svg-color-custom">{mainListItems}</List>
           <Divider />
-          <List className="svg-color-custom">{secondaryListItems}</List>
+          <List className="padding-top-remove svg-color-custom">{secondaryListItems}</List>
           <Divider />
         </Drawer>
       </div>
