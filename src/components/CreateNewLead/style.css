@@ -8,8 +8,13 @@
     width: 470px !important;
 }
 
+.text-field-custom >p {
+    margin: 0 !important;
+    min-height: unset !important;
+}
+
 .text-field-custom >div >input {
-    padding-left: 30px;
+    padding: 10px 0 10px 30px !important;
 }
 
 .text-field-custom >label {
@@ -42,18 +47,27 @@
     width: 470px !important;
 }
 
+.MuiDialogActions-root.MuiDialogActions-spacing {
+    display: none !important;
+}
+
+.calendar-div-custom button {
+    background: none !important;
+}
+
 .calendar-div-custom >label {
     margin-left: 30px !important;
     font-size: 14px;
 }
 
 .calendar-div-custom >div >input {
-    padding-left: 30px !important;
+    padding: 10px 0 10px 30px !important;
 }
 
 .calendar-div-custom >div >div {
     position: absolute;
     margin-left: -12px !important;
+    margin-top: -4px !important;
 }
 
 .margin-top-12px {
@@ -90,12 +104,49 @@
     font-size: 14px;
 }
 
+@-webkit-keyframes example {
+    0%   {left:0px; top:0px;}
+    16%  {left:8px; top:0px;}
+    33%  {left:0px; top:0px;}
+    50%  {left:8px; top:0px;}
+    66%  {left:0px; top:0px;}
+    83%  {left:8px; top:0px;}
+    100% {left:0px; top:0px;}
+  }
+  
+/* Standard syntax */
+@keyframes example {
+    0%   {left:0px; top:0px;}
+    16%  {left:8px; top:0px;}
+    33%  {left:0px; top:0px;}
+    50%  {left:8px; top:0px;}
+    66%  {left:0px; top:0px;}
+    83%  {left:8px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+.text-field-custom >label.Mui-error {
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 150ms; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: alternate-reverse; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 150ms;
+  animation-direction: alternate-reverse;  
+}
+
 .margin-top-40px {
     margin-top: 40px !important;
 }
 
 .new-select-custom >div >div >div >div.MuiInputBase-root {
     padding-left: 45px !important;
+}
+
+.warning-svg-custom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 600px) {
