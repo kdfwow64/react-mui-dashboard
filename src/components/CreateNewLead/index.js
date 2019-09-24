@@ -94,8 +94,11 @@ export default class CreateNewLead extends React.Component {
     handlePhoneChange = (e) => {
         const onlyNums = e.replace(/[^0-9]/g, '');
         var number = onlyNums;
-        if (onlyNums.length > 0 && onlyNums.length <= 10) {
+        if (onlyNums.length >= 0 && onlyNums.length <= 10) {
             switch(onlyNums.length) {
+                case 0:
+                    number = '';
+                    break;
                 case 1:
                     number = onlyNums.replace(/(\d{1})/, '($1');
                     break;
@@ -129,8 +132,32 @@ export default class CreateNewLead extends React.Component {
                 default:
                     number = onlyNums.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2 - $3');
             }
-            this.setState({ phoneValue: number });
+            console.log(number);
+            this.setState({ phoneValue: number, phoneTempValue: number });
         }
+    }
+
+    handlePhoneChangeDefault = (e) => {
+        if (e.target.value === '') {
+            this.setState({
+                phoneValue: ''
+            });
+            return;
+        }
+
+        if (e.target.value.length < this.state.phoneTempValue.length ) {
+            var onlyNums = this.state.phoneTempValue.replace(/[^0-9]/g, '');
+            var temp = '';
+            for ( let i = 0; i < onlyNums.length-1 ; i++) {
+                temp += onlyNums[i];
+            }
+            console.log("backspace");
+            console.log(this.state.phoneTempValue, temp);
+            this.handlePhoneChange(temp);
+            return;
+        }
+        console.log("add");
+        this.handlePhoneChange(e.target.value);
     }
 
     handleSubmit = () => {
@@ -212,9 +239,9 @@ export default class CreateNewLead extends React.Component {
                                         label="Phone"
                                         className="text-field-custom"
                                         placeholder="(###) ### - ####"
-                                        // onChange={this.handlePhoneChange}
+                                        onChange={this.handlePhoneChangeDefault}
                                         value={this.state.phoneValue}
-                                        onKeyDown={this.onKeyDown}
+                                        // onKeyDown={this.onKeyDown}
                                         validators={['matchRegexp:^[\s.(][0-9][0-9][0-9][\s.) ] [0-9][0-9][0-9] [\s.-] [0-9][0-9][0-9][0-9]$']}
                                         errorMessages={['Please input 10 digits', <ErrorIcon className="warning-svg-custom" />]}
                                     />
