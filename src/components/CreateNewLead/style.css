@@ -1,7 +1,7 @@
 
 .icon-textfield {
     position: absolute;
-    margin-top: 20px;
+    margin-top: 22px;
 }
 
 .text-field-custom {
@@ -119,7 +119,7 @@
     83%  {left:8px; top:0px;}
     100% {left:0px; top:0px;}
   }
-  
+
 /* Standard syntax */
 @keyframes example {
     0%   {left:0px; top:0px;}
@@ -137,7 +137,7 @@
   -webkit-animation-direction: alternate-reverse; /* Safari 4.0 - 8.0 */
   animation-name: example;
   animation-duration: 150ms;
-  animation-direction: alternate-reverse;  
+  animation-direction: alternate-reverse;
 }
 
 .margin-top-40px {
@@ -157,72 +157,4 @@
     right: 0;
     bottom: 0;
     margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-    .main-div-custom {
-        padding: 32px 0 !important;
-    }
-
-    .container-custom {
-        padding: 16px 0 !important;
-    }
-
-    .btn-add-lead-custom {
-        margin-left: 210px !important;
-    }
-
-    .content-custom {
-        text-align: center !important;
-    }
-
-    .content-custom-close {
-        padding: 0 !important;
-    }
-
-    .content-custom-open .overlay {
-        display: unset;
-        left: 0;
-        bottom: 0;
-        top: 0;
-        right: 0;
-        position: absolute;
-        background: rgba(0,0,0,0.5);
-    }
-
-    .MuiDrawer-root.MuiDrawer-docked {
-        box-shadow: none;
-    }
-
-    .text-field-custom {
-        width: 340px !important;
-    }
-    .fixed-text-field-custom {
-        width: 340px !important;
-    }
-
-    .calendar-div-custom {
-        margin-top: -20px !important;
-        width: 340px !important;
-    }
-
-    .select-fixed-txt {
-        left: 36px;
-    }
-
-    .new-select-custom >div {
-        width: 340px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-    .main-div-custom.content-open {
-        height: 100vh !important;
-        margin-right: -250px !important;
-        overflow: hidden !important;
-    }
-
-    .h1-custom {
-        margin-left: 30px;
-    }
 }

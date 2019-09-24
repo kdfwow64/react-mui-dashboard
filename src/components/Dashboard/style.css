@@ -25,12 +25,6 @@
     background-color: rgb(92, 42, 193, 0.7) !important;
 }
 
-.container-custom {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 16px;
-}
-
 .content-custom {
-    padding: 0 !important;
+    padding: 0 16px !important;
 }

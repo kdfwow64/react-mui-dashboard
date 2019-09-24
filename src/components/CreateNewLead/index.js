@@ -92,11 +92,7 @@ export default class CreateNewLead extends React.Component {
         this.setState({ formData });
     }
     handlePhoneChange = (e) => {
-        const onlyNums = e.target.value.replace(/[^0-9]/g, '');
-        const onlyNumsTemp = this.state.phoneTempValue.replace(/[^0-9]/g, '');
-        this.setState({
-            phoneTempValue: e.target.value
-        });
+        const onlyNums = e.replace(/[^0-9]/g, '');
         var number = onlyNums;
         if (onlyNums.length > 0 && onlyNums.length <= 10) {
             switch(onlyNums.length) {
@@ -142,10 +138,24 @@ export default class CreateNewLead extends React.Component {
             setTimeout(() => this.setState({ submitted: false }), 5000);
         });
     }
+
+    onKeyDown= (e) => {
+        if (e.keyCode !== 8) {
+            if (e.key) {
+                this.handlePhoneChange(e.target.value + e.key);
+            }
+        } else if (e.target.value.length > 0) {
+            var onlyNums = e.target.value.replace(/[^0-9]/g, '');
+            var temp = '';
+            for ( let i = 0; i < onlyNums.length-1 ; i++) {
+                temp += onlyNums[i];
+            }
+            this.handlePhoneChange(temp);
+        }
+    }
     render() {
         return (
             <main className={clsx(this.props.classes.content, "content-custom", this.props.open && "content-custom-open", !this.props.open && "content-custom-close")}>
-                <Container className={clsx(this.props.classes.container, "container-custom")}>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <ValidatorForm
                             ref="form"
@@ -202,8 +212,9 @@ export default class CreateNewLead extends React.Component {
                                         label="Phone"
                                         className="text-field-custom"
                                         placeholder="(###) ### - ####"
-                                        onChange={this.handlePhoneChange}
+                                        // onChange={this.handlePhoneChange}
                                         value={this.state.phoneValue}
+                                        onKeyDown={this.onKeyDown}
                                         validators={['matchRegexp:^[\s.(][0-9][0-9][0-9][\s.) ] [0-9][0-9][0-9] [\s.-] [0-9][0-9][0-9][0-9]$']}
                                         errorMessages={['Please input 10 digits', <ErrorIcon className="warning-svg-custom" />]}
                                     />
@@ -256,7 +267,6 @@ export default class CreateNewLead extends React.Component {
                         </ValidatorForm>
                     </MuiPickersUtilsProvider>
                     {/* <Button className="button-custom" onClick={this.props.openDashboard}>Create New Lead</Button> */}
-                </Container>
             </main>
         );
     }

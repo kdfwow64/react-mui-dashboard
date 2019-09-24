@@ -69,13 +69,11 @@ export default class Dashboard extends React.Component {
         return (
             <div className="content-main-div">
                 <main className={clsx(this.props.classes.content, "content-custom", this.props.open && "content-custom-open", !this.props.open && "content-custom-close")}>
-                    <Container maxWidth="lg" className={clsx(this.props.classes.container, "container-custom")}>
                         <BootstrapButton onClick={(e) => {return this.props.openNewLead(false);}} variant="contained" disableRipple className={clsx(this.props.classes.margin, "btn-custom")}>
                             <PhoneForwardedIcon style={{marginRight: '10px'}} />
                             CREATE NEW LEAD
                         </BootstrapButton>
                         {/* <Button className="button-custom">Create New Lead</Button> */}
-                    </Container>
                     <div className="overlay" onClick={this.props.onClick}/>
                     {/* <Copyright /> */}
                 </main>
