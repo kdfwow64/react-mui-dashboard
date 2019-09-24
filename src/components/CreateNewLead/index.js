@@ -132,7 +132,6 @@ export default class CreateNewLead extends React.Component {
                 default:
                     number = onlyNums.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2 - $3');
             }
-            console.log(number);
             this.setState({ phoneValue: number, phoneTempValue: number });
         }
     }
@@ -151,12 +150,9 @@ export default class CreateNewLead extends React.Component {
             for ( let i = 0; i < onlyNums.length-1 ; i++) {
                 temp += onlyNums[i];
             }
-            console.log("backspace");
-            console.log(this.state.phoneTempValue, temp);
             this.handlePhoneChange(temp);
             return;
         }
-        console.log("add");
         this.handlePhoneChange(e.target.value);
     }
 
