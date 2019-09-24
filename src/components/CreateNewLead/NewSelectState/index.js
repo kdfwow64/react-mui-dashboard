@@ -12,17 +12,183 @@ import MenuItem from '@material-ui/core/MenuItem';
 import CancelIcon from '@material-ui/icons/Cancel';
 
 const suggestions = [
-    { label: 'studio' },
-    { label: 'one bed apartment' },
-    { label: 'one bed house' },
-    { label: 'two bed apartment' },
-    { label: 'two bed house' },
-    { label: 'three bed apartment' },
-    { label: 'three bed house' },
-    { label: 'four bed apartment' },
-    { label: 'four bed house' },
-    { label: 'five bed apartment or more' },
-    { label: 'five bed house or more' }
+  {
+    label: "Alabama"
+  },
+  {
+      label: "Alaska",
+  },
+  {
+      label: "American Samoa",
+  },
+  {
+      label: "Arizona",
+  },
+  {
+      label: "Arkansas",
+  },
+  {
+      label: "California",
+  },
+  {
+      label: "Colorado",
+  },
+  {
+      label: "Connecticut",
+  },
+  {
+      label: "Delaware",
+  },
+  {
+      label: "District Of Columbia",
+  },
+  {
+      label: "Federated States Of Micronesia",
+  },
+  {
+      label: "Florida",
+  },
+  {
+      label: "Georgia",
+  },
+  {
+      label: "Guam",
+  },
+  {
+      label: "Hawaii",
+  },
+  {
+      label: "Idaho",
+  },
+  {
+      label: "Illinois",
+  },
+  {
+      label: "Indiana",
+  },
+  {
+      label: "Iowa",
+  },
+  {
+      label: "Kansas"
+  },
+  {
+      label: "Kentucky"
+  },
+  {
+      label: "Louisiana"
+  },
+  {
+      label: "Maine"
+  },
+  {
+      label: "Marshall Islands"
+  },
+  {
+      label: "Maryland"
+  },
+  {
+      label: "Massachusetts"
+  },
+  {
+      label: "Michigan"
+  },
+  {
+      label: "Minnesota"
+  },
+  {
+      label: "Mississippi"
+  },
+  {
+      label: "Missouri"
+  },
+  {
+      label: "Montana"
+  },
+  {
+      label: "Nebraska"
+  },
+  {
+      label: "Nevada"
+  },
+  {
+      label: "New Hampshire"
+  },
+  {
+      label: "New Jersey"
+  },
+  {
+      label: "New Mexico"
+  },
+  {
+      label: "New York"
+  },
+  {
+      label: "North Carolina"
+  },
+  {
+      label: "North Dakota"
+  },
+  {
+      label: "Northern Mariana Islands"
+  },
+  {
+      label: "Ohio"
+  },
+  {
+      label: "Oklahoma"
+  },
+  {
+      label: "Oregon"
+  },
+  {
+      label: "Palau"
+  },
+  {
+      label: "Pennsylvania"
+  },
+  {
+      label: "Puerto Rico"
+  },
+  {
+      label: "Rhode Island"
+  },
+  {
+      label: "South Carolina"
+  },
+  {
+      label: "South Dakota"
+  },
+  {
+      label: "Tennessee"
+  },
+  {
+      label: "Texas"
+  },
+  {
+      label: "Utah"
+  },
+  {
+      label: "Vermont"
+  },
+  {
+      label: "Virgin Islands"
+  },
+  {
+      label: "Virginia"
+  },
+  {
+      label: "Washington"
+  },
+  {
+      label: "West Virginia"
+  },
+  {
+      label: "Wisconsin"
+  },
+  {
+      label: "Wyoming"
+  }
   ].map(suggestion => ({
     value: suggestion.label,
     label: suggestion.label,
@@ -348,7 +514,7 @@ const suggestions = [
   
     return (
       <div className={classes.root}>
-        <span className="select-fixed-txt">State:</span>
+        <span className="select-fixed-txt">Move Size:</span>
         <NoSsr>
           <Select
             classes={classes}

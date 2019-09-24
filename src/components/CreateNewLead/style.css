@@ -106,6 +106,10 @@
     font-size: 14px;
 }
 
+.city-custom >div >input {
+    padding-left: 37px;
+}
+
 @-webkit-keyframes example {
     0%   {left:0px; top:0px;}
     16%  {left:8px; top:0px;}
@@ -141,7 +145,11 @@
 }
 
 .new-select-custom >div >div >div >div.MuiInputBase-root {
-    padding-left: 45px !important;
+    padding-left: 45px;
+}
+
+.move-size >div >div >div >div.MuiInputBase-root {
+    padding-left: 80px;
 }
 
 .warning-svg-custom {

@@ -16,6 +16,7 @@ import ErrorIcon from '@material-ui/icons/Error';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { emphasize, makeStyles, withStyles } from '@material-ui/core/styles';
 import NewSelect from './NewSelect';
+import NewSelectState from './NewSelectState';
 import './style.css';
 
 import {
@@ -204,8 +205,8 @@ export default class CreateNewLead extends React.Component {
                                         value={this.state.phoneValue}
                                     />
                                 </Grid>
-                                <Grid item xs={12} className="margin-top-12px new-select-custom">
-                                    <NewSelect />
+                                <Grid item xs={12} className="margin-top-12px new-select-custom move-size">
+                                    <NewSelectState />
                                 </Grid>
 
 
@@ -222,7 +223,7 @@ export default class CreateNewLead extends React.Component {
                                 <Grid item xs={12} className="margin-top-12px">
                                     <span className="fixed-txt">City:</span>
                                     <TextField
-                                        className="fixed-text-field-custom"
+                                        className="fixed-text-field-custom city-custom"
                                     />
                                 </Grid>
 
@@ -240,7 +241,7 @@ export default class CreateNewLead extends React.Component {
                                 <Grid item xs={12} className="margin-top-12px">
                                     <span className="fixed-txt">City:</span>
                                     <TextField
-                                        className="fixed-text-field-custom"
+                                        className="fixed-text-field-custom city-custom"
                                     />
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px" flex-end>
