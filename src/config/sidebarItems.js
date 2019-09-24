@@ -10,7 +10,10 @@ import CallMadeIcon from '@material-ui/icons/CallMade';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Divider from '@material-ui/core/Divider';
 import DescriptionIcon from '@material-ui/icons/Description';
+import { Icon, InlineIcon } from '@iconify/react';
+import monitorDashboard from '@iconify/icons-mdi/monitor-dashboard';
 import avatar from '../assets/images/avatar.png';
+
 export const mainListItems = (
   <div className="sidebar-href-div">
     <ListItem button className="avatar-btn">
@@ -25,24 +28,24 @@ export const mainListItems = (
     <Divider />
     <ListItem button>
       <ListItemIcon className="sidebar-href-svg-custom">
-        <DvrIcon color="red" />
+        <Icon icon={monitorDashboard} width="24px" height="24px" />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
-        <PhoneForwardedIcon />
+      <ListItemIcon className="sidebar-href-svg-custom">
+        <span class="iconify" data-icon="mdi-phone-plus" data-inline="false" width="24px" height="24px"></span>
       </ListItemIcon>
       <ListItemText primary="Create New Lead" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
+      <ListItemIcon className="sidebar-href-svg-custom">
         <CallMadeIcon />
       </ListItemIcon>
       <ListItemText primary="Request a Lead" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
+      <ListItemIcon className="sidebar-href-svg-custom">
         <ExitToAppIcon />
       </ListItemIcon>
       <ListItemText primary="Sign Out" />
@@ -54,13 +57,13 @@ export const secondaryListItems = (
   <div className="sidebar-href-div">
     <ListSubheader>Admin Controls: </ListSubheader>
     <ListItem button>
-      <ListItemIcon>
+      <ListItemIcon className="sidebar-href-svg-custom">
         <GroupIcon />
       </ListItemIcon>
       <ListItemText primary="Users" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
+      <ListItemIcon className="sidebar-href-svg-custom">
         <DescriptionIcon />
       </ListItemIcon>
       <ListItemText primary="Reports" />

@@ -33,7 +33,6 @@ class Sidebar extends Component {
           <div className="logo-div">
             <img src={logo}></img>
           </div>
-          <Divider />
           <List className="padding-top-remove svg-color-custom">{mainListItems}</List>
           <Divider />
           <List className="padding-top-remove svg-color-custom">{secondaryListItems}</List>

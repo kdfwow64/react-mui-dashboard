@@ -1,5 +1,6 @@
 body {
-    font-family: Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+    font-family: 'Roboto Regular', arial !important;
+    /* font-family: Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif !important; */
 }
 
 .content-open {

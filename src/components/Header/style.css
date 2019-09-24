@@ -1,4 +1,6 @@
 .header-custom {
+
+    font-family: 'Roboto Regular', arial !important;
     background-color: #7b39ff !important;
     position: fixed !important;
     font-size: 21px !important;
@@ -19,6 +21,10 @@
     left: 0 !important;
     margin-left: 250px !important;
     z-index: 99999 !important;
+}
+
+.header-title-custom {
+    font-family: 'Roboto Regular', arial !important;
 }
 
 @media only screen and (max-width: 600px) {

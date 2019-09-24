@@ -11,7 +11,7 @@
 .sidebar-custom .logo-div {
     width: 250px;
     height: 248px;
-    background-color: rgb(92, 42, 193); 
+    background-color: rgb(92, 42, 193);
 }
 
 .sidebar-custom .logo-div img {
@@ -55,6 +55,15 @@
 
 .sidebar-href-div >div[role=button] >div >svg {
     fill: #7b39ff !important;
+    color: #7b39ff !important;
+}
+
+.svg-color-custom {
+    padding-bottom: 0 !important;
+}
+
+.svg-color-custom span {
+    color: black !important;
 }
 
 .svg-color-custom .MuiListItemText-primary {

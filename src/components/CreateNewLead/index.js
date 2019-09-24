@@ -198,12 +198,14 @@ export default class CreateNewLead extends React.Component {
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px">
                                     <PhoneIcon className="icon-textfield" />
-                                    <TextField
+                                    <TextValidator
                                         label="Phone"
                                         className="text-field-custom"
                                         placeholder="(###) ### - ####"
                                         onChange={this.handlePhoneChange}
                                         value={this.state.phoneValue}
+                                        validators={['matchRegexp:^[\s.(][0-9][0-9][0-9][\s.) ] [0-9][0-9][0-9] [\s.-] [0-9][0-9][0-9][0-9]$']}
+                                        errorMessages={['Please input 10 digits', <ErrorIcon className="warning-svg-custom" />]}
                                     />
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px new-select-custom move-size">
@@ -228,7 +230,7 @@ export default class CreateNewLead extends React.Component {
                                     />
                                 </Grid>
 
-                                
+
                                 <h2 className="h1-custom">Moving To:</h2>
                                 <Grid item xs={12} className="margin-top-12px">
                                     <span className="fixed-txt">Zipcode:</span>
