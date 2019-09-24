@@ -74,7 +74,6 @@ class AppLayout extends Component {
               [classes.contentShift]: open,
               [classes[`contentShift-${anchor}`]]: open,
             })}>
-            <div className={classes.drawerHeader}></div>
             {/* <SettingBar anchor={anchor} onChangeAnchor={this.handleChangeAnchor} />
             <Switch>
               {appRoutes.map((route, index) => 

@@ -13,3 +13,8 @@ body {
 .header-title-custom {
     margin-left: 12px !important;
 }
+
+.main-div-custom {
+    margin-top: 50px;
+    padding: 16px !important;
+}

@@ -79,6 +79,7 @@ export default class CreateNewLead extends React.Component {
         }
     }
     handleDateChange = (date) => {
+        console.log(date);
         this.setState({
             selectedDate: date
         });
@@ -150,12 +151,12 @@ export default class CreateNewLead extends React.Component {
                             onSubmit={this.handleSubmit}
                         >
                             <Grid container>
-                                <Grid item xs={12} className="margin-top-12px">
+                                <Grid item xs={12} className="">
                                     <KeyboardDatePicker
                                         margin="normal"
                                         id="date-picker-dialog"
                                         label="MoveDate"
-                                        format="yyyy/mm/dd"
+                                        format="yyyy/MM/dd"
                                         autoOk="true"
                                         value={this.state.selectedDate}
                                         onChange={this.handleDateChange}
@@ -243,7 +244,7 @@ export default class CreateNewLead extends React.Component {
                                     />
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px" flex-end>
-                                    <BootstrapButton variant="contained" disableRipple className={clsx(this.props.classes.margin, "btn-custom margin-top-40px")}>
+                                    <BootstrapButton variant="contained" disableRipple className={clsx(this.props.classes.margin, "btn-add-lead-custom margin-top-40px")}>
                                         ADD LEAD
                                     </BootstrapButton>
                                 </Grid>
