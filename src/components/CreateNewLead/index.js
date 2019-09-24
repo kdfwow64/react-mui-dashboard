@@ -206,7 +206,7 @@ export default class CreateNewLead extends React.Component {
                                     />
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px new-select-custom move-size">
-                                    <NewSelectState />
+                                    <NewSelect />
                                 </Grid>
 
 
@@ -218,7 +218,7 @@ export default class CreateNewLead extends React.Component {
                                     />
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px new-select-custom">
-                                    <NewSelect />
+                                    <NewSelectState />
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px">
                                     <span className="fixed-txt">City:</span>
@@ -236,7 +236,7 @@ export default class CreateNewLead extends React.Component {
                                     />
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px new-select-custom">
-                                    <NewSelect />
+                                    <NewSelectState />
                                 </Grid>
                                 <Grid item xs={12} className="margin-top-12px">
                                     <span className="fixed-txt">City:</span>

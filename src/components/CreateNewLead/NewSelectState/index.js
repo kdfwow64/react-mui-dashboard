@@ -514,7 +514,7 @@ const suggestions = [
   
     return (
       <div className={classes.root}>
-        <span className="select-fixed-txt">Move Size:</span>
+        <span className="select-fixed-txt">State:</span>
         <NoSsr>
           <Select
             classes={classes}
