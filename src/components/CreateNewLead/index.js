@@ -159,6 +159,7 @@ export default class CreateNewLead extends React.Component {
                                         label="MoveDate"
                                         format="yyyy/MM/dd"
                                         autoOk="true"
+                                        validators={['required']}
                                         value={this.state.selectedDate}
                                         onChange={this.handleDateChange}
                                         KeyboardButtonProps={{
